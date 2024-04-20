@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Page Rotator</title>
+  <script>
+    window.onload = function() {
+      const pages = ['login.html', 'login_dash.html']; // Add your page URLs here
+      let currentIndex = 0;
+      const interval = setInterval(rotatePages, 4000); // 4 seconds interval
+
+      function rotatePages() {
+        window.location.href = pages[currentIndex];
+        currentIndex++;
+        if (currentIndex >= pages.length) {
+          clearInterval(interval); // Stop rotation
+        }
+      }
+    };
+  </script>
+</head>
+<body>
+  <!-- This body section will be replaced by the pages -->
+</body>
+</html>
