@@ -14901,6 +14901,21 @@
                         ]
                     ]
                 }</script>
+        <script>
+    window.onload = function() {
+      const pages = ['login_dash.html']; // Add your page URLs here
+      let currentIndex = 0;
+      const interval = setInterval(rotatePages, 4000); // 4 seconds interval
+
+      function rotatePages() {
+        window.location.href = pages[currentIndex];
+        currentIndex++;
+        if (currentIndex >= pages.length) {
+          clearInterval(interval); // Stop rotation
+        }
+      }
+    };
+  </script>
             <div id='has-finished-comet-page' hidden style='display: none;'></div>
         </body>
     </html>
